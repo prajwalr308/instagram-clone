@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBxsfJYFywJ4piqMVK0pNl5qH7cRzDY6K4",
-    authDomain: "socialm-dbeff.firebaseapp.com",
-    projectId: "socialm-dbeff",
-    storageBucket: "socialm-dbeff.appspot.com",
-    messagingSenderId: "592305759417",
-    appId: "1:592305759417:web:6ed644e71e11d6dd496768"
+  apiKey: "AIzaSyD59amDwObxXTQPUWmQ1CN76tdsCiGRdRA",
+  authDomain: "instagram-clone-64f1c.firebaseapp.com",
+  projectId: "instagram-clone-64f1c",
+  storageBucket: "instagram-clone-64f1c.appspot.com",
+  messagingSenderId: "335805485433",
+  appId: "1:335805485433:web:741055e5b4079d97521fa8"
   };
 
 const firebaseApp=firebase.initializeApp(firebaseConfig);

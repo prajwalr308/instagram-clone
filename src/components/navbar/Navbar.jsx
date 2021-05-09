@@ -11,10 +11,12 @@ import { UserContext } from '../../contexts/user';
 import styles from './navbar.module.css'
 import firebase from 'firebase'
 import SignoutBtn from '../signout-btn/SignoutBtn';
+import { orange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -43,13 +45,13 @@ export default function Navbar() {
   console.log(userLocal)
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar style={{ background: 'white' }} position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
          
           </IconButton>
-          <p>hello</p>
+          <p style={{color:"black"}}>Instaclone</p>
           <Typography variant="h6" className={classes.title} >
            
           </Typography>

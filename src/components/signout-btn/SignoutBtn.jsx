@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../contexts/user';
 import { logout } from '../../services/auth';
+import './signout.css'
 
 const SignoutBtn = () => {
     const [user,setUser] = useContext(UserContext).user;
@@ -10,7 +11,7 @@ const SignoutBtn = () => {
     }
     return (
         <div>
-            <button onClick={signOut} >signout</button>
+            <button className="btn-grad" onClick={signOut} >signout</button>
         </div>
     )
 }

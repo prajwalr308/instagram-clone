@@ -145,7 +145,7 @@ export default function Post(props) {
 
   return (
     <div className={styles.post}>
-   { type=='image/png'? <Card className={classes.root}>
+   <Card className={classes.root}>
       <CardHeader
       
         avatar={
@@ -195,57 +195,7 @@ export default function Post(props) {
         <div className={styles.empty}></div>
       <CommentInput commentbool={commentbool} id={id} comments={comments}  />
       <div className={styles.empty}></div>
-    </Card>:<Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            <img src={userPhoto} />
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings" onClick={deletePost}>
-            <DeleteIcon />
-          </IconButton>
-        }
-        title={username}
-      />
-      <ReactPlayer controls playIcon playing url={photoUrl} />
-     
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {caption}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton  aria-label="add to favorites" onClick={likeHandler}>
-          <FavoriteIcon />
-          <p>{likeCount}</p>
-        </IconButton>
-
-        <IconButton onClick={()=>{
-          setCommentbool(!commentbool);
-
-        }} >
-          <ChatBubbleIcon />
-        </IconButton>
-        
-        <br></br>
-      
-      </CardActions>
-      <div>
-          {comments ? (
-            comments.map((comment) => {
-              return(<Comment username={comment.username} comment={comment.comment} />)
-              
-            })
-          ) : (
-            <></>
-          )}
-        </div>
-        <div className={styles.empty}></div>
-      <CommentInput commentbool={commentbool} id={id} comments={comments}  />
-      <div className={styles.empty}></div>
-    </Card>}
+    </Card>
     </div>
     
   );
